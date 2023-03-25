@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="alert.css"> 
+</head>
+<style>
+	
+</style>
+<body>
+	<section class="servis">
+		<div class="contain">
+		
+			
+			<div class="kontainer">
+			<div class="content">
+				<section id="about" class="about">
+				<h1 align="center">Open <span>Recruitment</span></h1>
+			</section>
+				<br>
+				<form  id="form">
+				  <div class="user-details">
+					<div class="input-box">
+					  <span class="details">Nama</span>
+					  <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+					</div>
+					
+					<div class="input-box">
+					  <span class="details">Email</span>
+					  <input type="text" id="email" name="password" placeholder="Masukkan password" required>
+					</div>
+					
+					  <div class="input-box">
+						<span class="details">Agama</span>
+						
+					  <select class="kombo" id="agama" name="agama" >
+                    
+						
+                        <option>Islam</option>
+                        <option>Kristen Protestan</option>
+						<option>Kristen Katolik</option>
+						<option>Hindu</option>
+                        <option>Buddha</option>
+						<option>Konghucu</option>
+
+                    </select>
+					</div>
+					<div class="input-box">
+					  <span class="details">No Hp</span>
+					  <input type="text" id="telp" placeholder="Masukkan no telpon" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Alasan Ingin masuk Evos :</span>
+						<textarea class="teks" id="alamat" required></textarea>
+					  </div>
+					  <div class="input-box">
+						<span class="details">KTP</span>
+						<input type="file" id="gambar" >
+					  </div>
+				  </div>
+				  <div class="gender-details">
+					<input type="radio" name="gender" id="dot-1" value="wanita">
+					<input type="radio" name="gender" id="dot-2" value="pria">
+					<span class="gender-title">Jenis kelamin</span>
+					<div class="category">
+					  <label for="dot-1">
+					  <span class="dot one"></span>
+					  <span class="gender">Wanita</span>
+					</label>
+					<label for="dot-2">
+					  <span class="dot two"></span>
+					  <span class="pria">Pria</span>
+					</label>
+					</div>
+				  </div>
+				  <br>
+				  <span class="role" id="role">Role</span><br>
+				  
+				  <br>
+				  <input type="checkbox" id="t" name="Tanker" value="Tanker">
+				  <label for="Tanker"> Tanker</label><br>
+				  <input type="checkbox" id="o" name="Offlaner" value="Offlaner">
+				  <label for="Offlaner"> Offlaner</label><br>
+				  <input type="checkbox" id="g" name="Goldlaner" value="Goldlaner">
+				  <label for="Goldlaner"> Goldlaner</label><br>
+				  <input type="checkbox" id="s" name="Support" value="Support">
+				  <label for="Support"> Support</label><br>
+				  <input type="checkbox" id="j" name="Jungler" value="Jungler">
+				  <label for="Jungler"> Jungler</label><br>
+				
+				
+				  <div class="button" >
+					<center><input type="submit"></center>
+				  </div>
+
+				</form>
+				<div class="kembali">
+					<center><a href="../home/homevos.html" >
+						<button class="back">Kembali</button>
+					 </a></center>
+				</div>
+				<div>
+					<label id="demo"></label>
+				</div>
+				</div>
+			  </div>
+			</div>
+			
+	</section>
+<footer>
+	<p>
+	Hak cipta @copy 2023 - Refan
+	</p>
+</footer>
+
+</div>
+
+</body>
+<script>
+	const form = document.getElementById('form')
+	const nama = document.getElementById('nama')
+	const email = document.getElementById('email')
+	const st = document.getElementById('agama')
+	const s = document.getElementById('alamat')
+
+	const telp = document.getElementById('telp')
+	const wanita = document.getElementById('dot-1')
+	const pria = document.getElementById('dot-2')
+	
+	const hobi1 = document.getElementById('t')
+	const hobi2 = document.getElementById('o')
+	const hobi3 = document.getElementById('g')
+	const hobi4 = document.getElementById('s')
+
+	const hobi5 = document.getElementById('j')
+  
+
+	const dataForm = []
+  
+	form.addEventListener('submit', function(event){
+	  event.preventDefault()
+  
+	  let hobi1Value = '';
+	  let hobi2Value = '';
+	  let hobi3Value = '';
+
+	  let hobi4Value = '';
+	  let hobi5Value = '';
+
+  
+	  if(hobi1.checked) {
+		hobi1Value = hobi1.value;
+	  }
+	  if(hobi2.checked) {
+		hobi2Value = hobi2.value;
+	  }
+	  if(hobi3.checked) {
+		hobi3Value = hobi3.value;
+	  }
+	  if(hobi4.checked) {
+		hobi4Value = hobi4.value;
+	  }
+	  if(hobi5.checked) {
+		hobi5Value = hobi5.value;
+	  }
+	  dataForm.push({
+		"Nama": nama.value,
+		"email": email.value,
+		"agama": st.value,
+		"telp": telp.value,
+		"alamat": s.value,
+
+		"alamat": alamat.value,
+		"dot-1": wanita.value,
+		"dot-2": pria.value,
+		"t": hobi1Value,
+		"o": hobi2Value,
+		"g": hobi3Value,
+		"s": hobi4Value,
+		"j": hobi5Value,
+
+
+	  })
+  
+
+	  let dataUserString = JSON.stringify(dataForm);
+	  sessionStorage.setItem('dataUserKey', dataUserString);
+  
+	  alert("pendaftaran berhasil")
+	  window.location.href = "../login/index.html"
+	})
+  
+	var inputs = document.querySelectorAll('.button_img')
+	for (var i = 0, len = inputs.length; i < len; i++) {
+	  customInput(inputs[i])
+	}
+  </script>
+</html>

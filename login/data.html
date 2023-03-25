@@ -1,0 +1,135 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sidebar 05</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <style>
+
+        .form .message a {
+             color: #000000;
+             text-decoration: none;
+           }
+       .form .span a {
+           color: black;
+       }
+       .about span{
+       color: rgb(11, 11, 15);
+   }
+   </style>
+    
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4">
+		  		
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+	          </li>
+	         
+              <li class="active">
+	            <a href=""><span class="fa fa-user mr-3"></span> data</a>
+	          </li>
+	          <li>
+              <a href="index.html"><span class="fa fa-paper-plane mr-3"></span> log out</a>
+	          </li>
+	        </ul>
+
+	        <div class="mb-5">
+						
+						<p>Note <br>Harap Isi Form Data Diri Terlebih Dahulu </p>
+                        <form action="#" class="subscribe-form">
+                            <section id="about" class="about">
+                            <p class="message">Form Pendaftaran ! <a href="../Daftar/Daftar.html"> <span>Daftar Disini</span> </a></p>
+                        </section>
+						<form action="#" class="subscribe-form">
+	            <div class="form-group d-flex">
+	            	<div class="icon"><span class="icon-paper-plane"></span></div>
+	              <input type="text" class="form-control" placeholder="Enter Email Address">
+	            </div>
+	          </form>
+					</div>
+
+	     
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <ul>
+            <li>Nama             : <span id="nama"></span></li>
+            <li>Email            : <span id="email"></span></li>
+            <li>agama          : <span id="agama"></span></li>
+            <li>Telepon          : <span id="telp"></span></li>
+            <li>Alasan Ingin masuk Evos          : <span id="alamat"></span></li>
+            <li>Jenis Kelamin    : <span id="jk"></span></li>
+            <li>role            : <span id="hobi"></span></li>
+          </ul>
+      </div>
+		</div>
+		<script>
+			const dataForm = sessionStorage.getItem('dataUserKey')
+const userForm = JSON.parse(dataForm)
+
+const form = document.getElementById('frm')
+const nama = document.getElementById('nama')
+const email = document.getElementById('email')
+const st = document.getElementById('agama')
+const telp = document.getElementById('telp')
+const alamat = document.getElementById('alamat')
+const gambar = document.getElementById('gambar')
+const jk = document.getElementById('jk')
+const hobi = document.getElementById('hobi')
+
+
+nama.innerHTML = " " + userForm[0]["Nama"]
+email.innerHTML = " " + userForm[0]["email"]
+st.innerHTML = " " + userForm[0]["agama"]
+telp.innerHTML = " " + userForm[0]["telp"]
+alamat.innerHTML = " " + userForm[0]["alamat"]
+jk.innerHTML = "   " + userForm[0]["dot-1"]
+jk.innerHTML = "   " + userForm[0]["dot-2"]
+let hobiValue = ""
+if (userForm[0]["t"]) {
+  hobiValue += userForm[0]["t"] + " , "
+}
+if (userForm[0]["o"]) {
+  hobiValue += userForm[0]["o"] + " "
+}
+if (userForm[0]["g"]) {
+  hobiValue += userForm[0]["g"] + " "
+}
+if (userForm[0]["s"]) {
+  hobiValue += userForm[0]["s"] + " "
+}
+if (userForm[0]["j"]) {
+  hobiValue += userForm[0]["j"] + " "
+}
+
+hobi.innerHTML = " " + hobiValue
+
+	
+		</script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  
+</html>
