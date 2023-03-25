@@ -20,79 +20,17 @@ Terdapat beberapa Halaman dalam website :
  ![logo](gambar/home_profil.png)
  ▸ Tampilan Data Registrasi ke local storage
  ![logo](gambar/Local.png)
+ 
+ 
+ 
  ◈ Halaman Pendaftaran
  ![logo](gambar/Form_pendaftaran.png)
+ 
+ 
  ◈ Tampilan Pendaftaran dari Session Storage
  ![logo](gambar/Data_pendaftaran.png)
  ▸ Tampilan Pendaftaran ke Session storage
  ![logo](gambar/Session.png)
  
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
