@@ -22,6 +22,7 @@ Terdapat beberapa Halaman dalam website :
  ![logo](gambar/Local.png)
  
  ◈ Halaman Pendaftaran
+ ▸
  ![logo](gambar/Form_pendaftaran.png)
  ◈ Tampilan Pendaftaran dari Session Storage
  ![logo](gambar/Data_pendaftaran.png)
