@@ -7,4 +7,4 @@ Tema : Recruitment menjadi Pro Player Team EVOS
 Terdapat beberapa Halaman dalam website :
 
  ◈ Halaman Login
- 
+ ![logo](gambar/Beranda.png)
